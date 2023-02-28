@@ -2,10 +2,10 @@
 
 ---
 
-[Homebrew](https://brew.sh/) is a free and open-source software package management system
-for macOS. 
+[Homebrew](https://brew.sh/) is a free and open-source software package management 
+system for macOS. 
 
-This guide will show you how to install the Homebrew Package Manager 
+This guide will show you how to install the Homebrew Package Manager[^why] 
 on macOS and use it to install the required dependencies for the **NYU 
 Processor Design Team**.
 
@@ -143,7 +143,9 @@ you use to unlock your computer
     brew install cmake verilator clang-format
     ```
 
-- Homebrew installs packages in `/usr/local/Cellar/` by default
+- Homebrew installs packages in `/usr/local/Cellar/` by default so you
+  don't have stray files all over your system
+    - Instead, you have symlinks from `man`, `bin`, etc.
 
 - It will then make symlinks to the package at `/usr/local/opt/` and 
   `/usr/local/bin/` so the packages can be used as executables
@@ -197,6 +199,10 @@ brew install verilator
   for many more guides and explanations.
 
 ---
+[^why]: You might wonder why Homebrew, why not MacPorts or Fink. Homebrew 
+leverages everything that comes with macOS, making it much faster. It also
+installs without root access.
+
 [^tap]: Homebrew calls these "taps" or "bottles", depending on how they are 
 installed   
 
